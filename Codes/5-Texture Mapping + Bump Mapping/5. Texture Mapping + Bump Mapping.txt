@@ -1,0 +1,10 @@
+1. stb_image.h를 main cpp 파일과 같은 위치로 복사합니다.
+2. 먼저 #define STB_IMAGE_IMPLEMENTATION 을 정의하고 stb_image.h를 include 합니다.
+3. 초기화 부분에서 j3a 파일을 읽은 결과를 이용하여 각각 texture map image 및 bump map image를 buffer에 load 하고, OpenGL texture를 생성하고, 속성을 지정한 후 buffer를 upload 합니다. (Buffer를 free하지 않으면 감점)
+4. Rendering 부분에서 texture map과 bump map을 각각 다른 slot에 binding하고, slot 번호를 shader에 uniform으로 보내줍니다.
+5. shader에서 uniform sampler2d 로 texture map과 bump map을 받아 옵니다.
+6. shader에서 texture map과 texCoord를 이용하여 색상을 결정하고, 쉐이딩 과정에 diffuse color로 사용합니다.
+7. 강의 자료를 참고하여 bump map을 적용한 normal을 새로 계산하고 쉐이딩에 적용합니다.
+주의 1: map의 위 아래가 바꾸어 있으나 영상을 뒤집기 위한 기능을 켜고 image를 load 합니다.
+주의 2: 쉐이딩의 결과는 linear intensity이기 때문에 sRGB로 변환해야 아름다운 결과를 얻을 수 있습니다.
+역시 제출은 source code( *.cpp 파일, shader 파일)만 합니다.

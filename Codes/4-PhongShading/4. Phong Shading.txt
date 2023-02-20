@@ -1,0 +1,9 @@
+네 번째 과제는 phong shading을 구현하는 것입니다. 
+구현 조건
+1. diffuse color, light 위치, shininess, light 색상, ambient light 색상의 물성 및 조명 조건은 Cpp 프로그램에서 uniform으로 전달합니다.
+2. specular 계산에 사용되는 색은 흰색으로 합니다.
+3. ambient 계산에 사용되는 색은 diffuse color로 합니다.
+4. 반드시 depth test는 켜야 합니다.
+이 외에, 모델의 종류 등은 상관 없습니다.
+가급적, sRGB 색상 공간을 고려합니다.
+제출은 소스코드(cpp 파일, shader.frag, shader.vert)만 합니다.
